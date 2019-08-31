@@ -1,10 +1,3 @@
-# wtf-gulp-starter
-
-`npm install -g gulp-cli`
-
-`npm install`
-
-`gulp`
-
-To publish your page using github pages use `npm run deploy`
-"# hydrapp" 
+# hydrapp
+Simple PWA aplication which use local storage. 
+Clock reset every day at midnight and you can start drink water from the beginning.
