@@ -39,3 +39,4 @@ if (currentValue > 0) {
   localStorage.setItem(key, (localStorage.getItem(key)) -1)
   number.innerHTML =localStorage.getItem(key);  }
 })
+
