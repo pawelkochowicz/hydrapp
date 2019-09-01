@@ -40,3 +40,9 @@ if (currentValue > 0) {
   number.innerHTML =localStorage.getItem(key);  }
 })
 
+const historyButton = document.querySelector('.historyButton--js')
+
+historyButton.addEventListener ('click', (e) => {
+const history = document.querySelector('.history--js')
+history.classList.toggle('history--visible')
+})

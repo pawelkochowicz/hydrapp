@@ -71,6 +71,7 @@ body {
 
 .history {
   display: flex;
+  display: none;
   position: absolute;
   right: -1rem;
   min-width: 30rem;
@@ -81,6 +82,9 @@ body {
   z-index: 2;
   background: rgb(240, 240, 255);
   background: linear-gradient(189deg, rgb(200, 210, 252) 19%, rgba(207, 207, 253, 0.984)80%);
+  &--visible {
+    display: block;
+  }
 }
 
 .main {
