@@ -325,7 +325,7 @@ body {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  padding: 16px; }
+  position: relative; }
 
 .add {
   background: #ffffff;
@@ -355,7 +355,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  top: 200px;
+  top: 160px;
   width: 280px; }
 
 .remove {
@@ -367,6 +367,37 @@ body {
   left: 95px;
   top: 615px;
   width: 184px; }
+
+.historyButton {
+  background: none;
+  border: none;
+  color: white;
+  margin-top: 37px;
+  height: 23px;
+  left: 95px;
+  top: 615px;
+  width: 184px; }
+
+.history {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: none;
+  position: absolute;
+  right: -1rem;
+  min-width: 30rem;
+  min-height: 70vh;
+  -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.452);
+          box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.452);
+  border-radius: 8px;
+  margin-right: 80px;
+  z-index: 2;
+  background: #f0f0ff;
+  background: -webkit-linear-gradient(261deg, #c8d2fc 19%, rgba(207, 207, 253, 0.984) 80%);
+  background: -o-linear-gradient(261deg, #c8d2fc 19%, rgba(207, 207, 253, 0.984) 80%);
+  background: linear-gradient(189deg, #c8d2fc 19%, rgba(207, 207, 253, 0.984) 80%); }
+  .history--visible {
+    display: block; }
 
 .main {
   -webkit-box-align: center;
