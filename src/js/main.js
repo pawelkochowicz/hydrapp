@@ -19,30 +19,48 @@ if ('serviceWorker' in navigator) {
 const add = document.querySelector('.add--js');
 const remove = document.querySelector('.remove--js');
 const number = document.querySelector('.number--js');
-const key = new Date().toISOString().slice(0, 10)   
+const key = new Date().toISOString().slice(0, 10)
 
 if (!localStorage.getItem(key)) {
   localStorage.setItem(key, 0)
   number.innerHTML = '0';
-  }else {
-    number.innerHTML = localStorage.getItem(key)
-  }
+} else {
+  number.innerHTML = localStorage.getItem(key)
+}
 
 add.addEventListener('click', (e) => {
-  localStorage.setItem(key, parseInt(localStorage.getItem(key)) +1)
-  number.innerHTML =localStorage.getItem(key);
+  localStorage.setItem(key, parseInt(localStorage.getItem(key)) + 1)
+  number.innerHTML = localStorage.getItem(key);
 })
 
 remove.addEventListener('click', (e) => {
   const currentValue = parseInt(number.innerHTML);
-if (currentValue > 0) {
-  localStorage.setItem(key, (localStorage.getItem(key)) -1)
-  number.innerHTML =localStorage.getItem(key);  }
+  if (currentValue > 0) {
+    localStorage.setItem(key, (localStorage.getItem(key)) - 1)
+    number.innerHTML = localStorage.getItem(key);
+  }
 })
 
 const historyButton = document.querySelector('.historyButton--js')
 
-historyButton.addEventListener ('click', (e) => {
-const history = document.querySelector('.history--js')
-history.classList.toggle('history--visible')
+historyButton.addEventListener('click', (e) => {
+  const history = document.querySelector('.history--js')
+  history.classList.toggle('history--visible')
 })
+
+const list = document.querySelector('.history__list--js')
+
+const array = [];
+    for (let i = 0; i < localStorage.length; i++) {
+        let localStorageKey = localStorage.key(i);
+        array.push(localStorage.key(i));
+        array.sort();
+    }
+
+    array.forEach(key => {
+      let value = localStorage.getItem(key);
+      const li = document.createElement('li');
+      li.id = key;
+      list.appendChild(li);
+      li.textContent = `Data: ${key} ilość wypiych szklanek ${value}`;
+  })
