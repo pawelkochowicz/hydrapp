@@ -62,5 +62,6 @@ const array = [];
       const li = document.createElement('li');
       li.id = key;
       list.appendChild(li);
-      li.textContent = `Data: ${key} ilość wypiych szklanek ${value}`;
+      li.textContent = `Data: ${key} ilość wypitych szklanek ${value}`
   })
+
